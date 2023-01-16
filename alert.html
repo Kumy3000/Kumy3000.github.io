@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ca">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Alerta</title>
+        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="alert.css">
+        <script defer src="alert.js"></script>
+    </head>
+    <body>
+        <main>
+            <h1>Alerta</h1>
+            <p>Una alerta és un component que presenta un missatge breu i important, cridant l'atenció de l'usuari sense interrompre la seva tasca.</p>
+            <section id="sample">
+                <h2>Exemple</h2>
+               <p><label for="entrada">5+5</label></p>
+               <p><input id="entrada" type="number"></p>
+               <button>Comprova resultat</button>
+               <p role="alert" id="alerta"></p>
+            </section>
+            <section>
+                <h2>Instruccions</h2>
+                <ol>
+                    <li>L'element que conté l'alerta té l'atribut <code>role</code> amb el valor de <code>alert</code>. Aquest rol identifica a l'element com una alerta que ha de ser anunciada tan aviat com es presenti.</li>
+                    <li>L'element que conté l'alerta està ocult per defecte. Per a això, s'usa CSS per a seleccionar-ho i declarar la propietat <code>display</code> amb el valor <code>hidden</code>.</li>
+                    <li>S'usa JavaScript per a actualitzar la propietat <code>display</code> de l'element. Quan l'alerta sigui visible, tindrà el valor de <code>block</code>. Quan estigui oculta, tindrà el valor de <code>hidden</code>.</li>
+                </ol>
+            </section>
+            <section>
+                <h2>Referències</h2>
+                <ul>
+                    <li><a href="https://www.w3.org/WAI/ARIA/apg/patterns/alert/">Alert. ARIA Authoring Practices Guide (APG).</a></li>
+                </ul>
+            </section>
+        </main>
+    </body>
+</html>

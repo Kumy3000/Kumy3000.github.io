@@ -1,0 +1,11 @@
+#sample li {
+    display: inline-block;
+}
+#sample li::before {
+    display: inline-block;
+    content: "";
+    height: 0.9em;
+    margin: 0 0.2em;
+    border-right: 0.1em solid #333;
+    transform: rotate(15deg);
+}

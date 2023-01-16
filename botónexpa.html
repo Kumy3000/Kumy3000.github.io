@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Botó expandible</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="botónexpa.css">
+    <script defer src="botónexpa.js"></script>
+</head>
+<body>
+    <main>
+        <h1>Botó expandible</h1>
+        <p>Un botó expandible és un botó que mostra i oculta informació. Aquest component, per tant, consta de dues parts: un botó i el contingut que es mostra i oculta. El botó sol incloure algun símbol (per exemple, fletxes) per a indicar l'estat del contingut (visible o ocult).</p>
+        <section id="sample">
+            <h2>Exemple</h2>
+            <button id="botoncito" aria-expanded="false">T'agradaria saber fer eines accecisbles per la teva àgina web?</button>
+            <div id="respuesta" class="hidden">Quèdat en aquesta llibreria i et mostrare les instruccions pas a pas</div>
+        </section>
+        <section>
+            <h2>Instruccions</h2>
+            <ol>
+                <li>El botó es crea amb l'element<code>&lt;button&gt;</code>.</li>
+                <li>El botó necessita l'atribut<code>aria-expanded</code>,que serveix per a informar les tecnologies de suport sobre l'estat del contingut. El valor d'aquest atribut serà<code>true</code> si el contingut és visible o <code>false</code> si el contingut està ocult. S'usa JavaScript per a actualitzar el valor cada vegada que l'usuari premi el botó.</li>
+                <li>El contingut es crea amb l'element HTML que sigui més adequat. En els casos més senzills, l'element <code>&lt;div&gt;</code> seria adequat. S'usa JavaScript per a actualitzar la propietat <code>display</code> d'aquest element. Quan sigui visible, tindrà el valor de <code>block</code>. Quan estigui ocult, tindrà el valor de<code>hidden</code>.</li>
+            </ol>
+        </section>
+        <section>
+            <h2>Referències</h2>
+            <ul>
+                <li><a href="https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/">Disclosure (Show/Hide). ARIA Authoring Practices Guide (APG).</a></li>
+                <li><a href="https://dequeuniversity.com/library/aria/expand-collapse">Expand/Collapse. Deque University ARIA Examples.</a></li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>

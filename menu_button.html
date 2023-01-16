@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ca">
+    <head>
+        <meta charset="UTF-8">
+        <title>Botò de menú</title>
+        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="menu_button.css">
+        <script defer src="menu_button.js"></script>
+    </head>
+    <body>
+        <main>
+            <h1>Botò de menú</h1>
+            <p>Un botó de menú és un botó que obre i tanca un menú. El disseny d'aquest botó inclou, amb freqüència, una fletxa o un triangle que apunta cap avall quan el menú està obert i cap a la dreta quan està tancat.</p>
+            <section id="sample">
+                <h2>Exemple</h2>
+                <button id="botoncito" aria-expanded="false" aria-haspopup="true">Vols entrar al menú?</button>
+                <ul role="menu">
+                    <li><a href="https://www.google.com">Google</a></li>
+                    <li><a href="https://www.amazon.com">Amazon</a></li>
+                    <li><a href="https://www.apple.com">Apple</a></li>
+                </ul>
+            </section>
+            <section>
+                <h2>Instruccions</h2>
+                <ol>
+                    <li>El botó es crea amb l'element <code>&lt;button&gt;</code>.</li>
+                    <li>El botón necesita el atributo <code>aria-haspopup</code>, que serveix per a informar les tecnologies de suport que el botó obre nou contingut. El valor d'aquest atribut pot ser <code>menu</code> o <code>true</code>.</li>
+                    <li>El botó també necessita l'atribut <code>aria-expanded</code>,que serveix per a informar les tecnologies de suport sobre l'estat del contingut. El valor d'aquest atribut serà<code>true</code> si el menú és visible o <code>false</code>si el menú està ocult. S'usa JavaScript per a actualitzar el valor cada vegada que l'usuari premi el botó.</li>
+                    <li>El menú es crea amb l'element <code>&lt;ul&gt;</code>.Cada opció del menú serà un element de la llista.</li>
+                    <li>L'element<code>&lt;ul&gt;</code> necessita l'atribut<code>role</code> amb el valor de <code>menu</code>. Aquest atribut serveix perquè les tecnologies de suport identifiquin aquest element com un menú.</li>
+                    <li>El menú està ocult per defecte. Per a això, s'usa CSS per a seleccionar l'element <code>&lt;ul&gt;</code> i declarar la propietat <code>display</code> amb el valor <code>hidden</code>.</li>
+                    <li>S'usa JavaScript per a actualitzar la propietat <code>display</code> de l'element <code>&lt;ul&gt;</code>. Quan el menú sigui sigui visible, tindrà el valor de <code>block</code>. Quan estigui ocult, tindrà el valor de<code>hidden</code>.</li>
+                </ol>
+            </section>
+            <section>
+                <h2>Referències</h2>
+                <ul>
+                    <li><a href="https://www.w3.org/WAI/ARIA/apg/patterns/menubutton/">Menu Button. ARIA Authoring Practices Guide (APG).</a></li>
+                </ul>
+            </section>
+        </main>
+    </body>
+</html>

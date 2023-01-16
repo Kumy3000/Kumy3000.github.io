@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ca">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Carrusel</title>
+        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="carousel.css">
+        <script defer src="carousel.js"></script>
+    </head>
+    <body>
+        <main>
+            <h1>Carrusel</h1>
+            <p>Un carrusel presenta una sèrie de diapositives de manera seqüencial. Normalment només una diapositiva és visible i existeixen botons per a mostrar la següent i l'anterior. El carrusel podria girar les diapositives de manera automàtica, sense que l'usuari activi els botons, encara que això no és recomanable. La rotació pot ser en bucle (després de l'última diapositiva es mostra la primera novament) o detenir-se en l'última diapositiva.</p>
+            <p>La implementació d'un carrusel bàsic, sense rotació automàtica, necessita comptar amb els següents elements:</p>
+            <ol>
+                <li>Diapositives. Un carrusel necessita un conjunt de diapositives per a mostrar. Una diapositiva és un bloc de contingut. Pot ser qualsevol tipus de contingut: una imatge, text, un vídeo, etc.</li>
+                <li>Botó per a mostrar la següent diapositiva. Té, amb freqüència, forma de fletxa apuntant a la dreta.</li>
+                <li>Botón para mostrar la anterior diapositiva. Tiene, con frecuencia, forma de flecha apuntando a la izquierda.</li>
+            </ol>
+            <section id="sample">
+                <h2>Ejemplo</h2>
+                <div role="group" aria-roledescription="carousel" aria-label="fotos d'animals">
+                    <button type="button" aria-label="anterior">&lt;</button>
+                    <img src="imagenes/conejo.jpeg" alt="foto d'un conill gris fosc en una habitació" role="group" aria-roledescription="slide" aria-label="1 de 3" class="active">
+                    <img src="imagenes/Gatoo.jpg" alt="foto d'un gat negre mirant un juguet" role="group" aria-roledescription="slide" aria-label="2 de 3">
+                    <img src="imagenes/mosca.webp" alt="foto d'una mosca verda sobre una fulla" role="group" aria-roledescription="slide" aria-label="3 de 3">
+                    <button type="button" aria-label="següent">&gt;</button>
+                </div>
+            </section>
+            <section>
+                <h2>Instruccions</h2>
+                <ol>
+                    <li>L'element que conté el carrusel té l'atribut<code>role</code> amab el valor de <code>group</code>i l'atribut <code>aria-roledescription</code> amb el valor de <code>carousel</code>.</li>
+                    <li>Si el carrusel tingués un títol visible, s'usaria l'atribut <code>aria-labelledby</code> de l'element que conté el carrusel per a associar-lo amb el títol. Si no hi hagués cap títol visible, s'usaria l'atribut <code>aria-label</code>. Seria preferible que el títol no contingués la paraula "carrusel", doncs l'atribut <code>aria-roledescription</code> ja identifica el component com a tal.</li>
+                    <li>Els controls per a mostrar la diapositiva següent i anterior s'implementen amb botons.</li>
+                    <li>Cada element que conté una diapositiva té l'atribut <code>role</code> amb el valor de <code>group</code> i l'atribut <code>aria-roledescription</code> camb el valor de <code>slide</code>.</li>
+                    <li>Cada diapositiva necessita ser identificada amb un nom. Si la diapositiva tingués un títol visible, s'usaria l'atribut<code>aria-labelledby</code> en l'element que conté la diapositiva. Si no hi hagués cap títol visible, s'usaria l'atribut<code>aria-label</code>.Seria preferible que el nom no contingués la paraula "diapositiva", doncs l'atribut <code>aria-roledescription</code> ja identifica el component com a tal. Si no fos possible assignar un nom únic a cada diapositiva, llavors caldria identificar-les amb números. Per exemple: "1 de 10". Noti's que els números no identifiquen correctament el contingut de la diapositiva i és una solució que hauria d'usar-se de manera excepcional.</li>
+                </ol>
+            </section>
+            <section>
+                <h2>Referències</h2>
+                <ul>
+                    <li><a href="https://www.w3.org/WAI/ARIA/apg/patterns/carousel/">Carousel (Slide Show or Image Rotator). ARIA Authoring Practices Guide (APG).</a></li>
+                </ul>
+            </section>
+        </main>
+    </body>
+</html>

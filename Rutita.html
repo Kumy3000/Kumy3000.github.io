@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ruta de navegació</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="rutita.css">
+</head>
+
+<body>
+    <main>
+        <h1>Ruta de navegació</h1>
+        <p>Una ruta de navegació, o molla de pa (de l'anglès "breadcrumb"), és una eina de navegació en llocs i
+            aplicacions web. Consisteix en una línia de text que té enllaços a la ruta recorreguda per a arribar fins a la
+            pàgina actual. Entre els enllaços de la ruta sol aparèixer algun símbol de separació, com per exemple la
+            barra (/). L'últim element de la ruta sempre és la pàgina actual per a ajudar l'usuari a conèixer la seva
+            ubicació i orientar-se.</p>
+        <section id="sample">
+            <h2>Exemple</h2>
+            <nav aria-label="Ruta de navegación">
+                <ol>
+                    <li><a href="">Pàgina d'esport</a></li>
+                    <li><a href="">Deport</a></li>
+                    <li><a href="" aria-current="page">Fútbol</a></li>
+                </ol>
+            </nav>
+        </section>
+        <section>
+            <h2>Instruccions</h2>
+            <ol>
+                <li>La ruta de navegació ha de ser identificada com un element de navegació. Per tant, s'ha de
+                    crear dins d'un element<code>&lt;nav&gt;</code>.</li>
+                    <li>Opcionalment, després de l'element <code>&lt;nav&gt;</code> es pot afegir un encapçalat usant els
+                    elements d'HTML adequats (<code>&lt;h1&gt;</code> - <code>&lt;h6&gt;</code>).</li>
+                    <li>Si s'afegeix l'encapçalat, l'atribut <code>aria-labelledby</code> de l'element
+                    <code>&lt;nav&gt;</code> ha de tenir el valor de l'atributo <code>id</code> de l'encapçalat. Si no
+                    hi ha encapçalat, llavors caldria usar l'atribut <code>aria-label</code> de l'element
+                    <code>&lt;nav&gt;</code> per a assignar un nom a la ruta de navegació. D'aquesta manera, assignant un
+                    nom a l'element de navegació, es facilita la seva identificació en tecnologies de suport.</li>
+                    <li>L'últim enllaç de la ruta, el que correspon a la pàgina actual, ha de tenir l'atribut
+                    <code>aria-current</code> amb el valor de <code>page</code>. Si l'element que representa a la
+                    pàgina actual no és un enllaç, llavors no és necessari afegir l'atribut
+                    <code>aria-current</code>.</li>
+            </ol>
+        </section>
+        <section>
+            <h2>Referències</h2>
+            <ul>
+                <li><a href="https://es.wikipedia.org/wiki/Miga_de_pan_(inform%C3%A1tica)">Miga de pan (informática).
+                        Wikipedia.</a></li>
+                <li><a href="https://www.w3.org/WAI/ARIA/apg/patterns/breadcrumb/">Breadcrumb. ARIA Authoring Practices
+                        Guide (APG).</a></li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>

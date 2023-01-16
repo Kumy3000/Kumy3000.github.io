@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ca">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Diàleg</title>
+        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="dialog.css">
+        <script defer src="dialog.js"></script>
+    </head>
+    <body>
+        <main>
+            <h1>Diàleg</h1>
+            <p>Un diàleg és una finestra que se situa damunt del contingut de la pàgina. El seu objectiu és atreure l'atenció de l'usuari i interrompre la seva tasca, que no pot prosseguir fins que no es resolgui el diàleg. El contingut que està sota el diàleg roman inactiu i inoperatiu mentre el diàleg estigui obert. És a dir, l'usuari no pot interactuar amb el contingut de la pàgina mentre no tanqui el diàleg.</p>
+            <p>El focus del teclat ha de limitar-se al contingut del diàleg i no pot recaure sobre el contingut de la pàgina que queda sota. Quan s'obre el diàleg, el focus del teclat es mou al primer element que hagi de rebre el focus del teclat en el diàleg.</p>
+            <p>La tecla "Fuita" ha de tancar el diàleg.</p>
+            <section id="sample">
+                <h2>Exemple</h2>
+                <button type="button" id="megaboton">Com funciona un diàleg?</button>
+            </section>
+            <section>
+                <h2>Instrucciones</h2>
+                <ol>
+                    <li>L'element que conté el diàleg té l'atribut<code>role</code> amb el valor de <code>dialog</code> i l'atribut <code>aria-modal</code> amb el valor de <code>true</code>.El primer atribut identifica l'element com un diàleg i el segon informa les tecnologies de suport que una finestra modal s'obre sobre el contingut de la pàgina.</li>
+                    <li>El diàleg necessita ser identificat amb un títol. Per a això, la finestra del diàleg ha de contenir un encapçalat (per exemple, <code>&lt;h2&gt;</code>). Aquest encapçalat necessita un valor per a l'atribut <code>id</code>. L'element que conté el diàleg necessita l'atribut<code>aria-labelledby</code> amb el mateix valor que l'atribut <code>id</code> de l'encapçalat. D'aquesta manera, s'associa el títol amb el diàleg adequadament i les tecnologies de suport usaran el títol per a identificar el diàleg.</li>
+                    <li>El diàleg està ocult per defecte. Per a això, s'usa *CSS per a seleccionar l'element que el conté i declarar la propietat <code>display</code> amb el valor <code>hidden</code>.</li>
+                    <li>S'usa JavaScript per a actualitzar la propietat <code>display</code> del diàleg. Quan sigui sigui visible, tindrà el valor de <code>block</code>. Quan estigui ocult, tindrà el valor de <code>hidden</code>.</li>
+                </ol>
+            </section>
+            <section>
+                <h2>Referències</h2>
+                <ul>
+                    <li><a href="https://www.w3.org/WAI/ARIA/apg/patterns/dialogmodal/">Dialog (Modal). ARIA Authoring Practices Guide (APG).</a></li>
+                </ul>
+            </section>
+        </main>
+        <section role="dialog" aria-modal="true" aria-labelledby="dialogHeading" id="dialec">
+            <h2 id="dialogHeading">No ho deixis passar</h2>
+            <p>Tenim una nova oferta per a tu</p>
+            <button type="button" id="closeButton">Tancar</button>
+        </section>
+    </body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ca">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Pestanyes</title>
+        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="tabs.css">
+        <script defer src="tabs.js"></script>
+    </head>
+    <body>
+        <main>
+            <h1>Pestanyes</h1>
+            <p>Les pestanyes són un conjunt de botons que mostren i oculten seccions de contingut. Cada pestanya està associada a una secció de contingut, anomenada panell. Solament un panell és visible, el que correspon a la pestanya activa (l'estil de la qual ha de destacar sobre les altres per a indicar el seu estat actiu). Totes les pestanyes són visibles en un dels costats del panell, normalment el costat superior. En activar una pestanya, es mostra el contingut del panell associat i s'amaga el panell que era visible.</p>
+            <section id="sample">
+                <h2>Exemple</h2>
+                <div role="tablist" aria-label="paissos">
+                    <button type="button" role="tab" aria-selected="true" aria-controls="françapanel" id="botonfrança">França</button>
+                    <button type="button" role="tab" aria-selected="false" aria-controls="coreapanel" id="botoncorea">Corea</button>
+                    <button type="button" role="tab" aria-selected="false" aria-controls="espanyapanel" id="botonespanya">España</button>
+                </div>
+                <div id="françapanel" role="tabpanel" aria-labelledby="botonfrança">
+                    <p>França, a Europa Occidental, abasta ciutats medievals, viles alpines i platges mediterrànies. París, la seva capital, és famosa per les seves signatures d'alta costura, els museus d'art clàssic, com el Louvre, i monuments com la Torre Eiffel.</p>
+                </div>
+                <div id="coreapanel" role="tabpanel" aria-labelledby="botoncorea" class="hidden">
+                    <p>La República de Corea, comunament coneguda com a Corea del Sud,​ és un país sobirà d'Àsia Oriental, situat en la part sud de la península de Corea. Limita al nord amb Corea del Nord, amb la qual va integrar un sol país fins a 1945.</p>
+                </div>
+                <div id="espanyapanel" role="tabpanel" aria-labelledby="botonespanya" class="hidden">
+                    <p>Espanya, país de la península ibèrica d'Europa, inclou 17 regions autònomes amb diverses característiques geogràfiques i culturals. A Madrid, la seva capital, es troba el Palau Real i el Museu del Prado, que alberga obres de mestres europeus.</p>
+                </div>
+            </section>
+            <section>
+                <h2>Instruccions</h2>
+                <ol>
+                    <li>L'element que conté les pestanyes té l'atribut<code>role</code> amb el valor de <code>tablist</code>.</li>
+                    <li>L'element que conté les pestanyes també té l'atribut <code>aria-label</code> proporcionant un títol descriptiu per a les pestanyes.</li>
+                    <li>Les pestanyes s'han de crear dins de l'element amb el rol de <code>tablist</code>. Cada pestanya s'implementa amb un botó que té l'atribut <code>role</code> amb el valor de <code>tab</code></li>
+                    <li>La pestanya activa té l'atribut <code>aria-selected</code> amb el valor de <code>true</code>, mentre que les pestanyes inactives tenen el mateix atribut amb el valor de <code>false</code>. Aquest valor ha d'actualitzar-se amb JavaScript cada vegada que l'usuari canviï la pestanya activa.</li>
+                    <li>Totes les pestanyes tenen l'atribut <code>aria-controls</code> amb el valor de l'atribut <code>id</code> del panell associat.</li>
+                    <li>Cada element que conté un panell té l'atribut <code>role</code> amb el valor de <code>tabpanel</code>.</li>
+                    <li>Cada element que conté un panell també té l'atribut <code>aria-labelledby</code> amb el valor del atributo <code>id</code> de la pestanya associada.</li>
+                </ol>
+            </section>
+            <section>
+                <h2>Referències</h2>
+                <ul>
+                    <li><a href="https://www.w3.org/WAI/ARIA/apg/patterns/tabpanel/">Tabs. ARIA Authoring Practices Guide (APG).</a></li>
+                </ul>
+            </section>
+        </main>
+    </body>
+</html>

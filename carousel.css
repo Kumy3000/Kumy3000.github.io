@@ -1,0 +1,19 @@
+#sample img {
+    display: block;
+    width: 300px;
+    height: 175px;
+    display: none;
+}
+#sample img.active {
+    display: block;
+}
+[aria-roledescription="carousel"] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+#sample button {
+    font-weight: bold;
+    padding: 1em;
+}

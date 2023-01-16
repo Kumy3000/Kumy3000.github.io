@@ -1,0 +1,23 @@
+#sample button {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+}
+#sample rect.off {
+    fill: #999;
+}
+#sample rect.on {
+    fill: #0c0;
+}
+#sample button[aria-checked="true"] .on {
+    display: block;
+}
+#sample button[aria-checked="true"] .off {
+    display: none;
+}
+#sample button[aria-checked="false"] .on {
+    display: none;
+}
+#sample button[aria-checked="false"] .off {
+    display: block;
+}
